@@ -1,0 +1,53 @@
+{
+  "env": {
+    "es2020": true
+  },
+  "plugins": ["react", "import", "react-hooks", "prettier"],
+  "extends": [
+    "@react-native-community",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "semi": "off",
+    "quotes": "off",
+    "no-unused-vars": "off",
+    "import/no-named-as-default": "off",
+    "import/namespace": "off",
+    "import/no-unresolved": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react-native/no-inline-styles": "warn"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "@assets/*": ["src/assets/*"],
+      "@components": ["src/components"],
+      "@constants": ["src/constants"],
+      "@hooks": ["src/hooks"],
+      "@modules": ["src/modules"],
+      "@navigation": ["src/navigation"],
+      "@network": ["src/network"],
+      "@providers": ["src/providers"],
+      "@redux/*": ["src/redux/*"],
+      "@theme": ["src/theme"]
+    }
+  }
+}
